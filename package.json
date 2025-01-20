@@ -8,9 +8,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "This is an example repo to demonstrate the fundamental function of [browser-actions/setup-chrome](https://github.com/browser-actions/setup-chrome/tree/master). The goal is to showcase the core functionality for downloading and installing both chrome and it's driver.",
   "dependencies": {
     "@actions/exec": "^1.1.1",
     "@actions/tool-cache": "^2.0.2"
-  }
+  },
+  "type": "module"
 }
