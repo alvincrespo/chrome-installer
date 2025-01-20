@@ -38,4 +38,12 @@ Note: I am creating a volume here to keep track of any work I do within the repo
 
 # main.js
 
-TBD
+This script is direct translation of the install-browser bash script. It combines the downloadBrowser and installBrowser methods found in browser-actions/setup-chrome.
+
+*Usage*:
+
+```bash
+npm init -y && npm pkg set type=module
+npm i
+node main.js
+```
