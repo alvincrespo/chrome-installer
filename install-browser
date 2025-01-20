@@ -1,0 +1,22 @@
+#!/bin/bash
+
+cd /tmp
+
+# Create tmp directory to hold .deb file
+mkdir -p /tmp/deb-LGbDgE && cd /tmp/deb-LGbDgE
+
+# Retrieve the stable .deb file and name it google-chrome.deb
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O google-chrome.deb
+
+# Extract the contents of the .deb file
+# ar is a utility specifically designed to work with Debian packages
+ar x google-chrome.deb
+
+# Create tmp directory to hold the extracted contents fo the data.tar.xz file
+mkdir -p /tmp/chrome-Epds2F && cd /tmp/chrome-Epds2F
+
+# Extracts the contents of data.tar.xz
+tar -xf /tmp/deb-LGbDgE/data.tar.xz --directory /tmp/chrome-Epds2F --strip-components 4 ./opt/google
+
+# verify chrome version
+./chrome --version
